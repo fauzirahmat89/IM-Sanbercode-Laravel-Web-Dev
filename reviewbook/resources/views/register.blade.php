@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-</head>
-<body>
-    <h1>Buat Account Baru!</h1>
+@extends('layouts.master')
+
+@section('judul')
+REGISTER
+@endsection
+
+@section('content')
     <h2>Sign Up Form</h2>
     <form action="/register" method="post">
         @csrf
@@ -36,10 +34,6 @@
         <label>Bio:</label><br><br>
         <textarea name="Bio" rows="15" cols="30"></textarea><br>
 
-        <input type="submit">
-
-
-        
+        <input type="submit">     
     </form>
-</body>
-</html>
+@endsection
